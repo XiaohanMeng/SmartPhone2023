@@ -35,7 +35,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
         guard let location = lblLocation.text else {return}
         
         UploadProtocol?.uploadedImageDelegate(img: img, locationImg: location, titleImg: title)
-        
+        self.tabBarController?.selectedIndex = 0
     }
     
     @IBAction func takeAPictureAction(_ sender: Any) {
